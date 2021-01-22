@@ -1,0 +1,121 @@
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Insert title here</title>
+    <title>Java Projects</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/skel.min.js"></script>
+    <script src="js/skel-layers.min.js"></script>
+    <script src="js/init.js"></script>
+    <link rel="stylesheet" href="skel.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style-xlarge.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+
+<body id="top">
+    <!-- Header -->
+    <header id="header" class="skel-layers-fixed">
+        <h1><a href="#">Logo</a></h1>
+        <nav id="nav">
+            <ul>
+                <li><a routerLink="/addProject">New Project</a></li>
+                <li><a href="/">Home</a></li>
+                <li><a href="js">JavaScript</a></li>
+                <li><a href="angular">Angular</a></li>
+                <li><a href="/signup" class="button special">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main -->
+    <section id="main" class="wrapper style1">
+        <header class="major">
+            <h2>Java/Spring Boot Projects</h2>
+        </header>
+        <div class="container">
+            <div class="row">
+                <div class="4u">
+                    <section>
+                        <!-- <img class="image spring-img" src="images/SB.PNG" alt="" />-->
+                        <h3>Magna massa blandit</h3>
+                        <p>
+                            Feugiat amet accumsan ante aliquet feugiat accumsan. Ante blandit accumsan eu amet tortor non lorem felis semper. Interdum adipiscing orci feugiat penatibus adipiscing col cubilia lorem ipsum dolor sit amet feugiat consequat.
+                        </p>
+                        <!--<img class="image sb-img" src="images/springboot.PNG" alt="" />
+                        <img class="image java-img" src="images/java.PNG" alt="" />-->
+                    </section>
+                    <hr />
+                    <!--TODO do something-->
+                    <section>
+                        <h3>Projects</h3>
+                        <ul class="alt">
+                            <p *ngFor="let project of projects"></p>
+                            <li><a href="#projects">{{projects.title}}</a></li>
+
+                        </ul>
+                    </section>
+                </div>
+            </div>
+            <hr class="major" />
+            <div class="row">
+                <div class="6u">
+                    <form action="/add" method="post" modelAttribute="projectsArray">
+                        <div class="row">
+                            <div class="column">
+                                <div class="card" *ngFor="let project of projects">
+                                    <h3>{{project.title}}</h3>
+                                    <h3>{{project.date}}</h3>
+                                    <h3>{{project.description}}</h3>
+                                    <h3>{{project.status}}</h3>
+                                    <h3>{{project.languages}}</h3>
+                                    <h3>{{project.IDE}}</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="container">
+            <div class="row double">
+                <div class="6u">
+                    <div class="row collapse-at-2">
+                        <div class="6u">
+                            <h3>Accumsan</h3>
+                            <ul class="alt">
+                                <li><a href="#">Nascetur nunc varius</a></li>
+                            </ul>
+                        </div>
+                        <div class="6u">
+                            <h3>Faucibus</h3>
+                            <ul class="alt">
+                                <li><a href="#">Nascetur nunc varius</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <ul class="icons">
+                    <li>
+                        <a href="#" class="icon fa-github"><span class="label">Github</span></a>
+                    </li>
+                    <li>
+                        <a href="#" class="icon fa-linkedin"><span class="label">LinkedIn</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <ul class="copyright">
+            <li>&copy;All rights reserved.</li>
+            <li>Design: <a href="http://templated.co">TEMPLATED</a></li>
+            <li>Images: <a href="http://unsplash.com">Unsplash</a></li>
+        </ul>
+    </footer>
+</body>
